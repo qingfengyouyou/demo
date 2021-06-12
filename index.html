@@ -1,0 +1,43 @@
+﻿<!doctype html>
+<head>
+<title>jQuery网页向下滚动导航固定顶部代码</title>  
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<script src="js/jquery-1.11.3.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="css/index.css" >
+
+</head>  
+<body><script src="/demos/googlegg.js"></script>
+<div id="nav-wrap" style="height:1900px;background:#f0f9ff;margin-top:40px;position:relative;">
+	<ul id="nav" style="height:60px;background:#0F9;top:300px;position:absolute;width:100%;">
+		<li>导航栏项目一</li>
+		<li>导航栏项目二</li>
+		<li>导航栏项目三</li>
+		<li>导航栏项目四</li>
+		<li>导航栏项目五</li>
+	</ul>
+	<div style="text-align:center;margin:50px 0; font:normal 14px/24px 'MicroSoft YaHei';"><br><br><br>
+	<p>适用浏览器：360、FireFox、Chrome、Safari、Opera、傲游、搜狗、世界之窗. 不支持IE8及以下浏览器。</p>
+	</div>
+</div>
+
+<script>
+$(function(){
+	var a = $('#nav'),
+		b =a.offset();
+	$(document).on('scroll',function(){
+		var	c = $(document).scrollTop();
+		if(b.top<=c){
+			a.css({'position':'fixed','top':'0px'})
+			}
+			else{
+				a.css({'position':'absolute','top':'300px'})
+				}
+		})
+	})
+</script>
+
+</body>  
+</html> 
+
